@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Header Example</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #040404;
+    font-size: 18px; /* Increase base font size */
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  .logo {
+    font-size: 30px; /* Increase logo font size */
+    font-weight: bold;
+  }
+  .nav {
+    display: flex;
+    gap: 20px;
+  }
+  .nav-item {
+    text-decoration: none;
+    color: #080808;
+    font-size: 20px; /* Increase navigation item font size */
+    position: relative; /* Position for the hover effect */
+    transition: top 0.3s ease; /* Transition for smooth effect */
+  }
+  .nav-item:hover {
+    top: 5px; /* Move the item down on hover */
+  }
+  .button {
+    padding: 10px 20px;
+    background-color: #333;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px; /* Increase button font size */
+  }
+  .search-icon {
+    margin-left: 10px;
+  }
+  .container {
+    width: 100%;
+    height: 200vh; /* Increase the height for more scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column; /* Align children vertically */
+    text-align: center; /* Align text center */
+  }
+  .moving-text {
+    position: absolute;
+    right: 0;
+    left: 0;
+    animation: moveText 10s linear infinite;
+    white-space: nowrap;
+    font-size: 200px;
+    top: 0%;
+    font-weight: 10;
+  }
+  .paragraph {
+    margin-top: 100px; /* Adjust spacing */
+    max-width: 1000px; /* Limit paragraph width */
+    text-align: center; 
+    font-size: 40px;/* Align text center */
+  }
+  .image-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px; /* Adjust spacing */
+    width: 80%; /* Adjust width */
+  }
+  .image-container img {
+    width: 300px; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    position: relative; /* Position for the button */
+    transition: transform 0.3s ease; /* Transition for smooth effect */
+  }
+  .image-container img:hover .overlay {
+    transform: translateY(0); /* Move the overlay up on hover */
+  }
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transform: translateY(100%); /* Initially hide the overlay */
+    transition: transform 0.3s ease; /* Transition for smooth effect */
+    display: flex;
+    justify-content: space-around;
+  }
+  .overlay button {
+    padding: 10px 20px;
+    background-color: #333;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px; /* Adjust button font size */
+  }
+
+  @keyframes moveText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="logo">Show + Tell™</div>
+  <nav class="nav">
+    <a href="#" class="nav-item">Work</a>
+    <a href="#" class="nav-item">Studio</a>
+    <a href="#" class="nav-item">Services</a>
+    <a href="#" class="nav-item">Sectors</a>
+    <a href="#" class="nav-item">Insights</a>
+    <a href="#" class="nav-item">Careers</a>
+  </nav>
+  <button class="button">
+    Start a project
+    <span class="search-icon">🔍</span>
+  </button>
+</div>
+<div class="container">
+    <h1 class="moving-text">We make every interaction count</h1>
+    <p class="paragraph">
+        Show + Tell is a DIGITAL-FIRST branding and technology agency,
+        enabling companies to connect with their audience, extend their reach,
+        and enjoy greater COMMERCIAL success
+    </p>
+    <p class="par">WORKS</p>
+    <div class="image-container">
+        <div class="overlay">
+            <button>Button 1</button>
+            <button>Button 2</button>
+            <button>Button 3</button>
+            <button>Button 4</button>
+        </div>
+        <img src="image-1.webp" alt="Image 1" >
+        <img src="image-2.webp" alt="Image 2">
+        <img src="image-3.webp" alt="Image 3">
+        <img src="image-4.webp" alt="Image 4">
+       
+    </div>
+    <p>Embrasing the Digital Age: Optinet's Quest for brand & digital Transformation</p>
+</div>
+</body>
+</html>
